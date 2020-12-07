@@ -1,3 +1,10 @@
+일단 제가 작업하면서 주로 참고했던 내용은 이 thread에 대부분 포함되어 있습니다.
+https://github.com/pennersr/django-allauth/pull/2424
+제가 알기로는 애플에서 client id는 bundle id와 service id 두 종류가 있는데, 앱을 통해 발급받은 token은 service id로만 인증이 가능해서 현재 이 값을 사용하도록 settings에 정의되어 있습니다.
+웹을 통해 발급받은 token은 bundle id를 통해 인증해야 하는데, 현재 django-allauth 에서는 이 두개의 client id를 동시에 사용할 수 있도록 되어 있지 않은 상태인걸로 보입니다.. https://github.com/pennersr/django-allauth/issues/2718 여기에 비슷한 문제를 겪고 있는 issue가 있습니다.
+
+
+
 ==========================
 Welcome to django-allauth!
 ==========================
